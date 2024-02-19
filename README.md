@@ -28,7 +28,9 @@ Build on *nix :
 git clone https://github.com/btcsymbiotic/BTCSWallet.git && cd BTCSWallet && git clone https://github.com/btcsymbiotic/BTCSD.git cryptonote
 
 sudo apt install qttools5-dev
+
 sudo apt-get install qttools5-dev-tools
+
 sudo apt-get install qt5-default
 
 
