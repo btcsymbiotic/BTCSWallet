@@ -27,11 +27,16 @@ Build on *nix :
 
 git clone https://github.com/btcsymbiotic/BTCSWallet.git && cd BTCSWallet && git clone https://github.com/btcsymbiotic/BTCSD.git cryptonote
 
+sudo apt install qttools5-dev
+sudo apt-get install qttools5-dev-tools
+sudo apt-get install qt5-default
+
 
 then : (tested on Ubuntu 16.04/18.04 & MAC OS X 10.12.6 with cmake 3.10.0 + GCC 7.3.0 + boost 1.67.0 + QT 5.11.1)
 
 
-mkdir build && cd build && cmake .. && make
+mkdir build && cd build && cmake -DBoost_USE_STATIC_LIBS=ON -DBoost_NO_BOOST_CMAKE=ON ..
+ && make
 
 
 on Windows:
