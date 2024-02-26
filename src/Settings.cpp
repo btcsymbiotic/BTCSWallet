@@ -102,7 +102,7 @@ void Settings::load() {
   }
 
   QStringList defaultNodesList;
-  defaultNodesList << "node.crytposymbiotic.com" << "wallets.crytposymbiotic.com:"; //
+  defaultNodesList << "193.203.162.185:11222" << "193.203.162.185:18888:"; //
   if (!m_settings.contains(OPTION_RPCNODES)) {
     setRpcNodesList(QStringList() << defaultNodesList);
   } else {
@@ -685,7 +685,7 @@ void Settings::setOptimizationMixin(quint64 _mixin) {
 }
 
 void Settings::saveSettings() const {
-  QFile cfgFile(getDataDir().absoluteFilePath(QCoreApplication::applicationName() + "pars.cfg"));
+  QFile cfgFile(getDataDir().absoluteFilePath(QCoreApplication::applicationName() + "btcs.cfg"));
   if (cfgFile.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
     QJsonDocument cfg_doc(m_settings);
     cfgFile.write(cfg_doc.toJson());

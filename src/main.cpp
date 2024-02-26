@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2015 The Cryptonote developers
 // Copyright (c) 2016-2020 The Karbowanec developers
-// Copyright (c) 2018-2020 The ParsiCoin developers
+// Copyright (c) 2018-2020 The BTCS developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include <QApplication>
@@ -88,7 +88,7 @@ int main(int argc, char* argv[]) {
 
   //Create registry entries for URL execution
   QSettings BTCSKey("HKEY_CLASSES_ROOT\\BTCS", QSettings::NativeFormat);
-  BTCSKey.setValue(".", "ParsiCoin Wallet");
+  BTCSKey.setValue(".", "BTCS Wallet");
   BTCSKey.setValue("URL Protocol", "");
   QSettings BTCSOpenKey("HKEY_CLASSES_ROOT\\BTCS\\shell\\open\\command", QSettings::NativeFormat);
   BTCSOpenKey.setValue(".", "\"" + QCoreApplication::applicationFilePath().replace("/", "\\") + "\" \"%1\"");
@@ -99,7 +99,7 @@ int main(int argc, char* argv[]) {
   QProcess exec;
 
   //as root
-  args << "-c" << "printf '[Desktop Entry]\\nName = ParsiCoin URL Handler\\nGenericName = ParsiCoin\\nComment = Handle URL Sheme BTCS://\\nExec = " + QCoreApplication::applicationFilePath() + " %%u\\nTerminal = false\\nType = Application\\nMimeType = x-scheme-handler/BTCS;\\nIcon = ParsiCoin-Wallet' | tee /usr/share/applications/BTCS-handler.desktop";
+  args << "-c" << "printf '[Desktop Entry]\\nName = BTCS URL Handler\\nGenericName = BTCS\\nComment = Handle URL Sheme BTCS://\\nExec = " + QCoreApplication::applicationFilePath() + " %%u\\nTerminal = false\\nType = Application\\nMimeType = x-scheme-handler/BTCS;\\nIcon = BTCS-Wallet' | tee /usr/share/applications/BTCS-handler.desktop";
   exec.start("/bin/sh", args);
   exec.waitForFinished();
 

@@ -177,7 +177,7 @@ bool NodeAdapter::init() {
       }
 
   } else {
-      QUrl localNodeUrl = QUrl::fromUserInput(QString("127.0.0.1:%1").arg(CryptoNote::RPC_DEFAULT_PORT));
+      QUrl localNodeUrl = QUrl::fromUserInput(QString("193.203.162.185:%1").arg(CryptoNote::RPC_DEFAULT_PORT));
       m_node = createRpcNode(CurrencyAdapter::instance().getCurrency(), *this, LoggerAdapter::instance().getLoggerManager(), localNodeUrl.host().toStdString(), localNodeUrl.port());
       QTimer initTimer;
       initTimer.setInterval(3000);

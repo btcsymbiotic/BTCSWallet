@@ -286,7 +286,7 @@
           </size>
          </property>
          <property name="text">
-          <string> PARS</string>
+          <string> BTCS</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>

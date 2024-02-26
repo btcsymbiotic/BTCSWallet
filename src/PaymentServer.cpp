@@ -27,7 +27,7 @@ const QString BITCOIN_IPC_PREFIX("BTCS:");
 
 static QString ipcServerName()
 {
-    QString name("ParsiCoin");
+    QString name("BTCS");
 
     return name;
 }

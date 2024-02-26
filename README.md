@@ -2,7 +2,7 @@ Website :
 
 https://crytposymbiotic.com
 
- Building ParsiPay (BTCS GUI Wallet) 
+ Building BTCSWallet (BTCS GUI Wallet) 
 
 On *nix:
 
@@ -49,6 +49,6 @@ Then: (tested on windows 8.1/10 with boost 1.59.0 , cmake 3.10.0 , MSVS 2015 & Q
 mkdir build && cd build && cmake .. -G "Visual Studio 14" -DCMAKE_PREFIX_PATH=C:\Qt\Qt5.11.3\5.11.3\msvc2015
 
 
-then open ParsiPay.sln and Build.
+then open BTCSWallet.sln and Build.
 
 Good luck!

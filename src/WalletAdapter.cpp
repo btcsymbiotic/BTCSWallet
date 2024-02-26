@@ -225,7 +225,7 @@ void WalletAdapter::close() {
 }
 
 bool WalletAdapter::save(bool _details, bool _cache) {
-  return save(Settings::instance().getWalletFile() + "pars.temp", _details, _cache);
+  return save(Settings::instance().getWalletFile() + "btcs.temp", _details, _cache);
 }
 
 bool WalletAdapter::save(const QString& _file, bool _details, bool _cache) {
@@ -463,7 +463,7 @@ void WalletAdapter::onWalletInitCompleted(int _error, const QString& _errorText)
 void WalletAdapter::saveCompleted(std::error_code _error) {
   if (!_error && !m_isBackupInProgress) {
     closeFile();
-    renameFile(Settings::instance().getWalletFile() + "pars.temp", Settings::instance().getWalletFile());
+    renameFile(Settings::instance().getWalletFile() + "btcs.temp", Settings::instance().getWalletFile());
     Q_EMIT walletStateChangedSignal(tr("Ready"));
     Q_EMIT updateBlockStatusTextWithDelaySignal();
   } else if (m_isBackupInProgress) {

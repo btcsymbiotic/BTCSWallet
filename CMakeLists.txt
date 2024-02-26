@@ -431,7 +431,7 @@ qt5_use_modules(${PROJECT_NAME} Widgets Gui Network)
 set(CPACK_PACKAGE_NAME ${CN_PROJECT_NAME})
 set(CPACK_PACKAGE_VERSION ${CN_VERSION})
 set(CPACK_PACKAGE_VENDOR "BTCS-project")
-set(CPACK_PACKAGE_CONTACT "http://BTCS.net")
+set(CPACK_PACKAGE_CONTACT "http://cryptosymbiotic.com")
 set(CPACK_STRIP_FILES ON)
 if (APPLE)
     set(CPACK_GENERATOR DragNDrop)
@@ -454,7 +454,7 @@ elseif (UNIX)
         set(CPACK_DEBIAN_PACKAGE_MAINTAINER "${CPACK_PACKAGE_VENDOR} <contact@BTCS.net>")
         set(CPACK_DEBIAN_PACKAGE_SECTION Office)
         set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
-        set(CPACK_DEBIAN_PACKAGE_DESCRIPTION "BTCS PARS wallet
+        set(CPACK_DEBIAN_PACKAGE_DESCRIPTION "BTCS BTCS wallet
  BTCS is a decentralized, privacy oriented peer-to-peer
  cryptocurrency. It is open-source, nobody owns or controls BTCS
  and everyone can take part.")
@@ -466,8 +466,8 @@ set(CPACK_PACKAGE_FILE_NAME "${CPACK_DEBIAN_PACKAGE_NAME}-${CPACK_PACKAGE_VERSIO
         set(CPACK_RPM_PACKAGE_LICENSE "MIT")
         set(CPACK_RPM_PACKAGE_GROUP Office)
         set(CPACK_RPM_PACKAGE_REQUIRES "qt5-qtbase >= 5.3.2, qt5-qtbase-gui >= 5.3.2")
-        set(CPACK_RPM_PACKAGE_SUMMARY "BTCS PARS wallet")
-        set(CPACK_RPM_PACKAGE_DESCRIPTION "BTCS PARS wallet
+        set(CPACK_RPM_PACKAGE_SUMMARY "BTCS BTCS wallet")
+        set(CPACK_RPM_PACKAGE_DESCRIPTION "BTCS BTCS wallet
  BTCS is a decentrilized, privacy oriented peer-to-peer
  cryptocurrency. It is open-source, nobody owns or controls BTCS
  and everyone can take part.")
