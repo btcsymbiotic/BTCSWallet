@@ -56,7 +56,7 @@ mkdir build && cd build && cmake .. -G "Visual Studio 14" -DCMAKE_PREFIX_PATH=C:
 
 
 
-then open ParsiPay.sln and Build.
+then open BTCSWallet.sln and Build.
 
 
 Good luck!
